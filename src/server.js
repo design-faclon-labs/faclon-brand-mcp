@@ -51,7 +51,7 @@ export function createServer() {
         "Get Faclon brand guidance. Call this before building anything. " +
         'section "components" returns the Faclon components (structure, variants, tokens, text roles, CSS variables). section "rules" returns machine-readable rules with severity (error or warning) and whether each is locked, the defaults to apply when a request doesn\'t specify, and open questions where the Figma file contradicts itself. ' +
         "Pass format_profile to merge an output type's rules (profiles can only tighten global rules). " +
-        'section "assets" is the asset library: real logo, client and partner logo, team headshot and architecture icon files with URLs; filter with asset_category and asset_query. section "templates" with a format_profile returns that outcome\'s templates (layout references with thumbnails and layout notes): take layout only, never their content. ' +
+        'section "assets" is the asset library: real logo, client and partner logo, team headshot and architecture icon files with URLs; filter with asset_category and asset_query; add asset_inline when you cannot fetch the url. section "templates" with a format_profile returns that outcome\'s templates (layout references with thumbnails and layout notes): take layout only, never their content. ' +
         'section "data-viz" is reference layouts for numbers and systems in every format (stat layouts, charts, funnels, cycles, plant drawings): build designs like them, not copies. ' +
         'section "examples" is real work the brand team reviewed: each mistake, their comment and the rule that now prevents it; read it before designing in a format it covers. ' +
         'Sections marked "not_written" are gaps in the brand file: report them, never fill them in.',
@@ -59,6 +59,7 @@ export function createServer() {
         section: z.enum(SECTIONS).optional().describe('Default "overview".'),
         format_profile: z.string().optional().describe(`Output type. Currently: ${formatProfiles().join(", ")}.`),
         asset_category: z.enum(ASSET_CATEGORIES).optional().describe('Only with section "assets": one asset category.'),
+        asset_inline: z.boolean().optional().describe('Only with section "assets" and a filter: also return each file as a data URI (data_uri), for when the url cannot be fetched from your environment or the output must embed the file. Keep the filter narrow; large files beyond a size budget keep only the url.'),
         asset_query: z.string().optional().describe('Only with section "assets": words to match in names and tags, e.g. "steel", "gateway", "bruce".'),
       },
       annotations: { title: "Get brand guidelines", ...readOnly },

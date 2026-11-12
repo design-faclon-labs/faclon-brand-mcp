@@ -2,6 +2,10 @@
 
 Each change to the system bumps `brand_version` in `version.json` (format `YYYY.MM.DD-n`). Newest first.
 
+## 2026-11-12
+
+- Assets: `get_brand_guidelines(section: "assets")` takes `asset_inline: true` and returns each file as a data URI (1 MB budget per call, larger files keep the url only), for clients that cannot fetch the asset urls. Found when a cloud session blocked the Vercel host and left logos and design elements out.
+
 ## 2026-10-31
 
 - Components from the Figma sync: new Icon square atom (Size 16, 24, 32, 40) in Icon Card, Feature grid and List Item Card, with its use line; 29 components. The sync plugin now exports figma.mixed values as "mixed" (it failed with "Cannot unwrap symbol" on the Comparison table rows, which have a bottom border only) and the build warns about them.

@@ -205,3 +205,17 @@ test("architecture: zone colours only on request, legend always asked", () => {
   for (const id of ["zone-colours", "legend-unasked"]) assert.ok(p.guardrails.must_not.some((i) => i.id === id), id);
   assert.match(p.skill, /\*\*Always ask:\*\* whether they want a legend/);
 });
+
+test("asset_inline returns files as data URIs within the size budget", () => {
+  const r = getBrandGuidelines({ section: "assets", asset_category: "logos", asset_query: "faclon-labs-logo-blue", asset_inline: true });
+  const e = r.assets.find((a) => a.file === "logos/faclon-labs-logo-blue.svg");
+  assert.ok(e.url.startsWith(ASSET_BASE_URL));
+  assert.equal(Buffer.from(e.data_uri.split(",")[1], "base64").toString(), fs.readFileSync(file(e.file), "utf8"));
+  assert.match(e.data_uri, /^data:image\/svg\+xml;base64,/);
+
+  const all = getBrandGuidelines({ section: "assets", asset_category: "design-elements", asset_inline: true });
+  assert.ok(all.assets.some((a) => a.inline_skipped), "over-budget files fall back to the url");
+  assert.ok(all.assets.every((a) => a.url && (a.data_uri || a.inline_skipped)));
+  const plain = getBrandGuidelines({ section: "assets", asset_category: "logos" });
+  assert.ok(plain.assets.every((a) => !a.data_uri));
+});
