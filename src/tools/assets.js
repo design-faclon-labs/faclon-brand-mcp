@@ -1,4 +1,6 @@
-import { readData } from "../lib/data.js";
+import fs from "node:fs";
+import path from "node:path";
+import { readData, ROOT } from "../lib/data.js";
 import { P } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 
@@ -7,6 +9,9 @@ import { BrandError } from "../lib/envelope.js";
 export const ASSET_CATEGORIES = ["logos", "partner-logos", "client-logos", "team-headshots", "design-elements", "architecture-outcomes", "icons"];
 export const ASSET_BASE_URL = (process.env.ASSET_BASE_URL || "https://faclon-brand-mcp.vercel.app").replace(/\/$/, "");
 const MAX = 80;
+const MIME = { ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp" };
+// Total raw bytes of files inlined in one response; the rest keep their url only.
+export const INLINE_BUDGET = 1_000_000;
 
 const USE = {
   logos: "Faclon Labs logo blue on light backgrounds, white on dark or brand backgrounds; full logo by default, the logomark only where the user asks. Never redraw, recolour or typeset a logo.",
@@ -20,7 +25,22 @@ const USE = {
 
 const withUrl = (e) => ({ ...e, url: `${ASSET_BASE_URL}/assets/${e.file}` });
 
-export function getAssets({ asset_category, asset_query } = {}) {
+// For clients that cannot fetch the url (sandboxes with a network allowlist, PPTX builders):
+// the file itself as a data URI, within INLINE_BUDGET.
+function withInline(entries) {
+  let used = 0;
+  return entries.map((e) => {
+    const file = path.join(ROOT, P.assets, e.file);
+    const mime = MIME[path.extname(e.file).toLowerCase()];
+    if (!mime || !fs.existsSync(file)) return e;
+    const buf = fs.readFileSync(file);
+    if (used + buf.length > INLINE_BUDGET) return { ...e, inline_skipped: "Over the inline size budget for one call; request fewer assets (narrow asset_query) or use the url." };
+    used += buf.length;
+    return { ...e, data_uri: `data:${mime};base64,${buf.toString("base64")}` };
+  });
+}
+
+export function getAssets({ asset_category, asset_query, asset_inline } = {}) {
   const index = readData(P.assetIndex);
   if (asset_category && !ASSET_CATEGORIES.includes(asset_category)) {
     throw new BrandError("INVALID_PARAM", `Unknown asset category "${asset_category}".`, `Use one of: ${ASSET_CATEGORIES.join(", ")}.`);
@@ -36,7 +56,7 @@ export function getAssets({ asset_category, asset_query } = {}) {
       for (const e of items) for (const t of e.tags) groups[t] = (groups[t] || 0) + 1;
       byCat[c] = { count: items.length, use: USE[c], groups, names: c === "icons" ? undefined : items.map((e) => e.name) };
     }
-    return { ...base, categories: byCat, how_to_get_files: 'Pass asset_category and/or asset_query to get entries with their file URL (e.g. asset_category "client-logos", asset_query "steel").' };
+    return { ...base, categories: byCat, how_to_get_files: 'Pass asset_category and/or asset_query to get entries with their file URL (e.g. asset_category "client-logos", asset_query "steel"). If the URL cannot be fetched from where you run (network allowlist) or the output needs the file embedded, add asset_inline: true to get each file as a data URI (keep the query narrow).' };
   }
 
   const words = (asset_query || "").toLowerCase().split(/\s+/).filter(Boolean);
@@ -50,6 +70,7 @@ export function getAssets({ asset_category, asset_query } = {}) {
     total: matches.length,
     shown: Math.min(matches.length, MAX),
     note: matches.length > MAX ? `Showing the first ${MAX}; narrow with asset_query.` : matches.length === 0 ? "Nothing matches. Tell the user the asset is not in the library; never substitute or draw one." : undefined,
-    assets: matches.slice(0, MAX).map(withUrl),
+    assets: (asset_inline ? withInline : (x) => x)(matches.slice(0, MAX).map(withUrl)),
+    inline: asset_inline ? 'Each entry has data_uri (the file itself) so it can be embedded without fetching the url; entries marked inline_skipped keep only the url.' : undefined,
   };
 }

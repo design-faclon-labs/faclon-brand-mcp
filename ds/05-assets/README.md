@@ -20,6 +20,7 @@ Web and UI icons are not stored here: they come from Lucide (rule `icon.lucide-o
 - Client and partner logos are approved for external marketing (decided 2026-10-27).
 - Every asset is owned by the Faclon Labs brand team. Client and partner logos are approved for external marketing, and team headshots for marketing use whenever required (decided 2026-10-28). Two headshot roles are left empty on purpose: never invent them.
 - Next to the Faclon Labs logo, partner logos follow the co-branding lockup (rule `logo.co-branding`, `02-brand-elements/logo`).
+- Files are placed by each entry's `url`. Where the url cannot be fetched (a sandbox with a network allowlist) or the output must embed the file (for example a PPTX), ask again with `asset_inline: true` for a narrow filter: each entry then carries `data_uri`, the file itself, within a size budget per call (larger files keep the url only). Never redraw a logo because it could not be fetched; say so.
 - Logos are placed as supplied: never redrawn, recoloured or typeset. Logo usage rules are in `02-brand-elements/logo`.
 
 ## Refreshing from Figma

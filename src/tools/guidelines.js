@@ -20,7 +20,7 @@ export const formatProfiles = () => Object.keys(outcomes()).sort();
 
 const isGap = (section) => Boolean(SECTION_FILES[section]) && readDoc(SECTION_FILES[section]).meta.status === "not_written";
 
-export function getBrandGuidelines({ section = "overview", format_profile, asset_category, asset_query } = {}) {
+export function getBrandGuidelines({ section = "overview", format_profile, asset_category, asset_query, asset_inline } = {}) {
   if (!SECTIONS.includes(section)) {
     throw new BrandError("INVALID_PARAM", `Unknown section "${section}".`, `Use one of: ${SECTIONS.join(", ")}.`);
   }
@@ -53,7 +53,7 @@ export function getBrandGuidelines({ section = "overview", format_profile, asset
 
   if (section === "templates") return { section, status: "written", ...getTemplates({ format_profile }), format_profile: profileInfo };
 
-  if (section === "assets") return { section, status: "written", ...getAssets({ asset_category, asset_query }), format_profile: profileInfo };
+  if (section === "assets") return { section, status: "written", ...getAssets({ asset_category, asset_query, asset_inline }), format_profile: profileInfo };
 
   if (section === "components") return { section, status: "written", ...components(profile), format_profile: profileInfo };
 
