@@ -16,7 +16,7 @@ The pattern behind most comments: content was poured into rows of same-size text
 
 - **Brand team:** "looks empty need to have proper content/type size distribution"
 - **What went wrong:** the title sits in the upper half and a small details box is pinned to the bottom edge, leaving a wide empty band between them; nothing on the left balances the dot form.
-- **Do instead:** the title, subline and details form one group, placed together; raise the type a role before leaving space empty. Rules: `density`, decision `deck-density`.
+- **Do instead:** the title, subline and details form one group, placed together; a slide with little content stays minimal; never enlarge the type or add decoration to fill the space. Rules: `density`, decision `deck-density`.
 - **Good:** the cover template ![Cover template](%TEMPLATES_URL%/decks/thumbnails/cover-headline-stats-and-contact.png)
 
 ### Team

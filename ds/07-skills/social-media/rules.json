@@ -12,51 +12,51 @@
     "max_style": "display/xl",
     "note": "Sizes are at the 540 px design size; double them at 1080.",
     "styles": {
-      "headline": {
+      "heading_h1_bold": {
         "style": "heading/h1",
         "weight": 700,
         "use": "the main message of the post"
       },
-      "cover_headline": {
+      "display_md": {
         "style": "display/md",
         "weight": 700,
-        "use": "the headline on a cover slide"
+        "use": "the main text on a cover slide (Display)"
       },
-      "subheadline": {
+      "heading_h2_bold": {
         "style": "heading/h2",
         "weight": 700,
         "use": "the line beside a big number"
       },
-      "subheader": {
+      "body_xl": {
         "style": "body/xl",
         "weight": 400,
-        "use": "the line under a title"
+        "use": "Subtitle: the line under a title"
       },
-      "metric": {
+      "display_xl": {
         "style": "display/xl",
         "weight": 400,
         "use": "big numbers and results; Bold only when the user asks, never larger"
       },
-      "metric_in_grid": {
+      "display_lg": {
         "style": "display/lg",
         "weight": 400,
         "use": "big numbers in a stat grid"
       },
-      "body": {
+      "body_lg": {
         "style": "body/lg",
         "weight": 400,
         "use": "short supporting text"
       },
-      "footnote": {
+      "body_2xs": {
         "style": "body/2xs",
         "weight": 400,
-        "use": "footnotes, never smaller"
+        "use": "footnotes: references and sources, never smaller"
       }
     },
     "roles": {
-      "label": "Role/Label: tags, chart labels and the series label",
-      "cta": "Role/Button: the call to action",
-      "caption": "Role/Caption: source or legal line"
+      "label": "tags, chart labels and the series label",
+      "cta": "the call to action",
+      "caption": "source or legal line"
     }
   },
   "themes": {
@@ -97,7 +97,7 @@
       "contains": [
         "image supplied by the user",
         "title",
-        "subheader"
+        "subtitle"
       ]
     },
     "content": {
@@ -126,7 +126,7 @@
       },
       "padding/container": {
         "value": 16,
-        "use": "inside every card, box and panel"
+        "use": "inside every card and box"
       },
       "padding/section": {
         "value": 56,
@@ -143,9 +143,9 @@
       "sequence": "Steps or a change in how work is done: an icon flow (icons converging into one pill, or numbered nodes with connectors) with short text under each.",
       "problem_solution": "A problem and its answer, or before and after: a split contrast, the problem side in the Negative intent and the answer in brand or Positive.",
       "comparison": "Before and after, or options: labelled bars or a compact comparison table.",
-      "like_items": "Parallel items (data sources, capabilities, pain points): cards or tiles with a Lucide icon per item, sized to their content, or an icon grid.",
+      "like_items": "Parallel items (data sources, capabilities, pain points): cards with a Lucide icon per item, sized to their content, or an icon grid.",
       "quote": "A customer or leader quote: a quote card with the highlighted phrase, name and role, and the headshot from the asset library where it exists.",
-      "message": "One statement or call to action (cover, closing): the headline as the hero, with a design element where the background allows it."
+      "message": "One statement or call to action (cover, closing): the heading as the hero, with a design element where the background allows it."
     }
   },
   "product_visuals": {
@@ -166,7 +166,7 @@
   },
   "bruce_ai": {
     "gradient": "gradient/bruce-ai",
-    "note": "Figma paint style (blue to pink). Used only on Bruce AI content, for example the headline or a highlight."
+    "note": "Figma paint style (blue to pink). Used only on Bruce AI content, for example the heading or a highlight."
   },
   "guardrails": {
     "status": "approved",
@@ -204,7 +204,7 @@
       },
       {
         "id": "type",
-        "text": "Text uses the style set for its element (headline Heading/H1 Bold, body Body/LG, big numbers Display/XL Regular), between 10px and 72px.",
+        "text": "Text uses the style set for its element (heading Heading/H1 Bold, body Body/LG, big numbers Display/XL Regular), between 10px and 72px.",
         "basis": [
           "profile:typography.styles",
           "rule:type.styles-only"

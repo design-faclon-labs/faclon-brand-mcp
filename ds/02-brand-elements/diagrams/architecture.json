@@ -75,13 +75,13 @@
       "label": {
         "use": "Network gear and secondary devices: switches, LIUs, routers, gateways.",
         "layout": "Icon with no box or tag, the name below as plain text, centred, at most 2 lines.",
-        "text": "typography.styles.device_label",
+        "text": "typography.styles: device labels",
         "icon_to_label": "gap/inline"
       },
       "caption": {
         "use": "Repeated small devices: cameras, sensors, lights, meters.",
         "layout": "Icon with a short caption beside or below it, left-aligned to the icon.",
-        "text": "typography.styles.device_caption",
+        "text": "typography.styles: device captions",
         "icon_to_caption": "spacing/4"
       }
     },

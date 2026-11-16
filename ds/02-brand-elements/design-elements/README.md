@@ -1,6 +1,6 @@
 # Design elements
 
-Graphic elements that carry the brand in layouts, beyond shapes. They are on the Figma page Graphic elements, section Design elements. Each element is used only on the backgrounds listed for it.
+Design elements that carry the brand in layouts, beyond shapes. They are on the Figma page Graphic elements, section Design elements. Each element is used only on the backgrounds listed for it.
 
 | Element | Background | What it is |
 |---|---|---|
@@ -21,6 +21,6 @@ Graphic elements that carry the brand in layouts, beyond shapes. They are on the
 
 Gradients are allowed only as the brand's gradient styles (get_tokens category "gradient", CSS `--gradient-*`), where a rule allows them:
 
-- **gradient/bruce-ai** (`--gradient-bruce-ai`, blue #2436FB to pink #F377F7, left to right): Bruce AI content only, for example the headline or a highlight on a Bruce AI post.
+- **gradient/bruce-ai** (`--gradient-bruce-ai`, blue #2436FB to pink #F377F7, left to right): Bruce AI content only, for example the heading or a highlight on a Bruce AI post.
 
 Glow is approved for Bruce AI content only, for example the glowing product visual on the Bruce AI carousel cover; never on other content. The green gradient/brand style (`--gradient-brand`) is a brand gradient with no use defined yet; ask before using it. No other gradient is allowed.

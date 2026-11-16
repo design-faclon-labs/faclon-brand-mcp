@@ -337,20 +337,22 @@ test("architecture spec uses only design-system styles and tokens", () => {
   assert.deepEqual(p.canvas, { width: 1920, height: 1080, unit: "px", ratio: "16:9" });
   assert.equal(p.logo.position, "top-right");
   assert.deepEqual(p.export.file_types, ["html"]);
-  // Text styles: each element x density is a real style with that weight, never below 12px.
-  for (const [el, spec] of Object.entries(p.typography.styles)) {
-    for (const d of ["dense", "medium", "open"]) {
-      const s = t.typography.styles[spec[d].style];
-      assert.ok(s, `${el}.${d}: no text style ${spec[d].style}`);
-      assert.ok(s.weights[spec[d].weight], `${el}.${d}: ${spec[d].style} has no ${spec[d].weight} weight`);
-      assert.ok(s.desktop.size >= 12, `${el}.${d}: ${s.desktop.size}px is below 12px`);
+  // Text styles: each density entry is a real style with that weight, never below 12px; its colours are tokens.
+  const usesOf = (e) => e.use.split("; ");
+  const colourOf = (e) => (typeof e.colour === "string" ? [e.colour] : Object.values(e.colour));
+  for (const d of ["dense", "medium", "open"]) {
+    for (const [key, spec] of Object.entries(p.typography.styles[d])) {
+      const s = t.typography.styles[spec.style];
+      assert.ok(s, `${d}.${key}: no text style ${spec.style}`);
+      assert.ok(s.weights[spec.weight], `${d}.${key}: ${spec.style} has no ${spec.weight} weight`);
+      assert.ok(s.desktop.size >= 12, `${d}.${key}: ${s.desktop.size}px is below 12px`);
+      for (const c of colourOf(spec)) assert.ok(t.color.semantic.light[c.split("/")[0]][c.split("/")[1]], `${d}.${key}: colour ${c} is not a token`);
     }
-    assert.ok(p.typography.styles[el].dense && t.color.semantic.light[spec.colour.split("/")[0]][spec.colour.split("/")[1]], `${el}: colour ${spec.colour} is not a token`);
   }
-  // Sizes never shrink from open to dense.
-  for (const spec of Object.values(p.typography.styles)) {
-    const size = (d) => t.typography.styles[spec[d].style].desktop.size;
-    assert.ok(size("open") >= size("medium") && size("medium") >= size("dense"));
+  // Sizes never shrink from open to dense, for each kind of text.
+  const sizeOf = (d, use) => t.typography.styles[Object.values(p.typography.styles[d]).find((e) => usesOf(e).includes(use)).style].desktop.size;
+  for (const use of Object.values(p.typography.styles.dense).flatMap(usesOf)) {
+    assert.ok(sizeOf("open", use) >= sizeOf("medium", use) && sizeOf("medium", use) >= sizeOf("dense", use), use);
   }
   // Every token name used anywhere in the spec exists.
   // Semantic tokens, or a primitive (the light brand tints brand/300, brand/400), which also has a CSS variable.
@@ -395,7 +397,7 @@ test("A4 document spec uses only design-system styles and tokens", () => {
     const style = t.typography.styles[s.style];
     assert.ok(style?.weights[s.weight], `${el}: ${s.style} ${s.weight} is not a text style`);
     assert.ok(style.desktop.size >= p.typography.min_size, `${el} is below the minimum`);
-    if (s.colour !== "per intent") assert.ok(colour(s.colour), `${el}: ${s.colour} is not a token`);
+    for (const c of typeof s.colour === "string" ? [s.colour] : Object.values(s.colour)) if (c !== "per intent") assert.ok(colour(c), `${el}: ${c} is not a token`);
   }
   const spacing = (n) => (n.startsWith("spacing/") ? t.spacing.scale.includes(Number(n.split("/")[1])) : n in t.spacing.roles.desktop);
   const walk = (o, out = []) => { for (const v of Object.values(o)) typeof v === "string" ? out.push(v) : walk(v, out); return out; };
@@ -541,7 +543,7 @@ test("newsletter spec: 600/400 breakpoints, 24px padding, token styles, placehol
       assert.ok(size >= min, `newsletter ${name} (${bp}) is ${size}px`);
     }
   }
-  assert.ok(t.styles[p.typography.step_down.hero_title]);
+  assert.ok(t.styles[p.typography.step_down.heading_h2]);
   const sp = getTokens({ category: "spacing" }).tokens;
   assert.ok(sp.scale.includes(24));
   for (const k of ["between_sections", "between_blocks", "text_group", "inside_cards"]) {

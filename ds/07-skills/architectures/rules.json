@@ -14,110 +14,113 @@
     "min_size": 12,
     "one_text_size": "Every text in the diagram except the title and the zone and sub-zone headings (node tags, device labels, captions, arrow labels, notes) uses one size: the density's diagram text style (Dense Body/XS 12px, Medium Body/SM 14px, Open Body/MD 16px). Only the weight differs: Semi Bold (600) for node tags, Medium (500) for the rest. No other size or weight is mixed in.",
     "styles": {
-      "title": {
-        "dense": {
+      "dense": {
+        "heading_h2": {
           "style": "heading/h2",
-          "weight": 600
+          "weight": 600,
+          "use": "title",
+          "colour": "text/heading"
         },
-        "medium": {
-          "style": "heading/h1",
-          "weight": 600
-        },
-        "open": {
-          "style": "display/md",
-          "weight": 600
-        },
-        "colour": "text/heading"
-      },
-      "zone_heading": {
-        "dense": {
+        "heading_h5": {
           "style": "heading/h5",
-          "weight": 500
+          "weight": 500,
+          "use": "zone headings",
+          "colour": "text/secondary"
         },
-        "medium": {
+        "body_sm_semibold": {
+          "style": "body/sm",
+          "weight": 600,
+          "use": "sub-zone headings",
+          "colour": "text/secondary"
+        },
+        "body_xs_semibold": {
+          "style": "body/xs",
+          "weight": 600,
+          "use": "node tags",
+          "colour": "text/heading"
+        },
+        "body_xs_medium": {
+          "style": "body/xs",
+          "weight": 500,
+          "use": "device labels; device captions; arrow labels",
+          "colour": {
+            "device labels": "text/secondary",
+            "device captions": "text/body",
+            "arrow labels": "text/secondary"
+          }
+        }
+      },
+      "medium": {
+        "heading_h1": {
+          "style": "heading/h1",
+          "weight": 600,
+          "use": "title",
+          "colour": "text/heading"
+        },
+        "heading_h4_medium": {
           "style": "heading/h4",
-          "weight": 500
+          "weight": 500,
+          "use": "zone headings",
+          "colour": "text/secondary"
         },
-        "open": {
-          "style": "heading/h3",
-          "weight": 500
-        },
-        "colour": "text/secondary"
-      },
-      "sub_zone_heading": {
-        "dense": {
-          "style": "body/sm",
-          "weight": 600
-        },
-        "medium": {
+        "body_lg_semibold": {
           "style": "body/lg",
-          "weight": 600
+          "weight": 600,
+          "use": "sub-zone headings",
+          "colour": "text/secondary"
         },
-        "open": {
+        "body_sm_semibold": {
+          "style": "body/sm",
+          "weight": 600,
+          "use": "node tags",
+          "colour": "text/heading"
+        },
+        "body_sm_medium": {
+          "style": "body/sm",
+          "weight": 500,
+          "use": "device labels; device captions; arrow labels",
+          "colour": {
+            "device labels": "text/secondary",
+            "device captions": "text/body",
+            "arrow labels": "text/secondary"
+          }
+        }
+      },
+      "open": {
+        "display_md_semibold": {
+          "style": "display/md",
+          "weight": 600,
+          "use": "title",
+          "colour": "text/heading"
+        },
+        "heading_h3_medium": {
+          "style": "heading/h3",
+          "weight": 500,
+          "use": "zone headings",
+          "colour": "text/secondary"
+        },
+        "body_xl_semibold": {
           "style": "body/xl",
-          "weight": 600
+          "weight": 600,
+          "use": "sub-zone headings",
+          "colour": "text/secondary"
         },
-        "colour": "text/secondary"
-      },
-      "node_tag": {
-        "dense": {
-          "style": "body/xs",
-          "weight": 600
-        },
-        "medium": {
-          "style": "body/sm",
-          "weight": 600
-        },
-        "open": {
+        "body_md_semibold": {
           "style": "body/md",
-          "weight": 600
+          "weight": 600,
+          "use": "node tags",
+          "colour": "text/heading"
         },
-        "colour": "text/heading"
-      },
-      "device_label": {
-        "dense": {
-          "style": "body/xs",
-          "weight": 500
-        },
-        "medium": {
-          "style": "body/sm",
-          "weight": 500
-        },
-        "open": {
+        "body_md_medium": {
           "style": "body/md",
-          "weight": 500
-        },
-        "colour": "text/secondary"
-      },
-      "device_caption": {
-        "dense": {
-          "style": "body/xs",
-          "weight": 500
-        },
-        "medium": {
-          "style": "body/sm",
-          "weight": 500
-        },
-        "open": {
-          "style": "body/md",
-          "weight": 500
-        },
-        "colour": "text/body"
-      },
-      "arrow_label": {
-        "dense": {
-          "style": "body/xs",
-          "weight": 500
-        },
-        "medium": {
-          "style": "body/sm",
-          "weight": 500
-        },
-        "open": {
-          "style": "body/md",
-          "weight": 500
-        },
-        "colour": "text/secondary"
+          "weight": 500,
+          "use": "device labels; device captions; arrow labels",
+          "colour": {
+            "device labels": "text/secondary",
+            "device captions": "text/body",
+            "arrow labels": "text/secondary"
+          }
+        }
       }
     }
   },
@@ -176,7 +179,7 @@
       },
       {
         "id": "padding",
-        "text": "48px padding on all four sides (spacing/48); content area 1824 × 984 px, and nothing sits outside it.",
+        "text": "48px safe area on all four sides (spacing/48); content area 1824 × 984 px, and nothing sits outside it.",
         "basis": [
           "profile:safe_area",
           "profile:content_area"

@@ -8,16 +8,16 @@ Industrial objects (pipes, tanks, machines) drawn as a grid of small dots or cha
 
 - **Theme:** brand. Background `background/brand`; the form in `text/on-brand` (white).
 - **Colour:** one colour on one background. The form gets depth from dot density, never from a gradient, glow or shading.
-- **Composition:** one large form, cropped by the edge, with clear space left for the headline.
+- **Composition:** one large form, cropped by the edge, with clear space left for the heading.
 - **Use for:** covers, page breakers, hero areas and social post covers about plants and equipment.
 - **Avoid:** several colours, glowing or 3D-shaded dots, AI cliche subjects (brains, circuits, robots), text set over the dots.
 
 ## Pixel dissolve
 
-A field of square pixels that thins out across the page into a solid block that holds the headline.
+A field of square pixels that thins out across the page into a solid block that holds the heading.
 
-- **Theme:** light. Page on `background/secondary`; pixels in brand blue (`container/brand`); the headline block on `container/inverse` with `text/inverse`.
-- **Composition:** pixels are dense at one edge and fade toward the text block; the headline sits in the solid block, never on the pixels.
+- **Theme:** light. Page on `background/secondary`; pixels in brand blue (`container/brand`); the heading block on `container/inverse` with `text/inverse`.
+- **Composition:** pixels are dense at one edge and fade toward the text block; the heading sits in the solid block, never on the pixels.
 - **Use for:** statement and quote slides, poster-style covers and section openers.
 - **Avoid:** randomly scattered dots with no direction, pixels behind text, more than one pixel colour.
 

@@ -94,7 +94,7 @@
     },
     {
       "id": "pill-radius",
-      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "text": "Never put a pill radius on a card, container, input or image.",
       "basis": [
         "rule:radius.pill-only-for-pills"
       ]
@@ -108,7 +108,7 @@
     },
     {
       "id": "section-numbers",
-      "text": "Never number section headings or put a number badge or tile beside them ('1.', '6.' and the like). Section numbers in the user's draft (for example '🔹 1. The Real Problem') mark the draft's structure and are not shown; separate sections with spacing and the heading itself. This covers section headings only: numbered steps inside a section's body stay when their order matters.",
+      "text": "Never number section headings or put a number badge or card beside them ('1.', '6.' and the like). Section numbers in the user's draft (for example '🔹 1. The Real Problem') mark the draft's structure and are not shown; separate sections with spacing and the heading itself. This covers section headings only: numbered steps inside a section's body stay when their order matters.",
       "basis": [
         "decision:newsletter-no-section-numbers"
       ]
@@ -125,7 +125,7 @@
   "avoid": [
     {
       "id": "long-headings",
-      "text": "Avoid headings longer than 60 characters. If one is longer, do not change it: highlight it to the user, offer one or two other ways to present it (for example a shorter heading with the rest moved to the subheader) and say which you advise. If the user says no, use their heading exactly as given; if they approve, use the approved version.",
+      "text": "Avoid headings longer than 60 characters. If one is longer, do not change it: highlight it to the user, offer one or two other ways to present it (for example a shorter heading with the rest moved to the subtitle) and say which you advise. If the user says no, use their heading exactly as given; if they approve, use the approved version.",
       "basis": [
         "profile:typography.max_heading_chars",
         "decision:newsletter-long-headings",
@@ -190,7 +190,7 @@
     },
     {
       "id": "hero",
-      "text": "The top of the email can be (a) a banner image with the heading on it, (b) a banner image with title, subheader and CTA, or (c) a title, subheader and image. Use only the elements the user gives; never add a CTA, subheader or image that was not asked for.",
+      "text": "The top of the email can be (a) a banner image with the heading on it, (b) a banner image with title, subtitle and CTA, or (c) a title, subtitle and image. Use only the elements the user gives; never add a CTA, subtitle or image that was not asked for.",
       "basis": [
         "profile:hero.compositions",
         "decision:newsletter-hero"
@@ -205,7 +205,7 @@
     },
     {
       "id": "hero-type",
-      "text": "Hero title heading/h2 (32px desktop, 26px mobile), subheader body/lg (18px, 16px), CTA Role/Button, on token line heights. A long heading the user keeps may step down to heading/h3 so it stays uncluttered.",
+      "text": "Heading heading/h2 (32px desktop, 26px mobile), subtitle body/lg (18px, 16px), CTA Role/Button, on token line heights. A long heading the user keeps may step down to heading/h3 so it stays uncluttered.",
       "basis": [
         "profile:typography.styles",
         "profile:typography.step_down",
@@ -247,7 +247,7 @@
     },
     {
       "id": "cards",
-      "text": "Cards and panels use the container default: container/primary, 1px border/container, padding/container, radius/default (2px); a card at least half the content width uses Size Large (radius/3xl, 12px). Nest with container/secondary, then container/tertiary.",
+      "text": "Cards use the container default: container/primary, 1px border/container, padding/container, radius/default (2px); a card at least half the content width uses Size Large (radius/3xl, 12px). Nest with container/secondary, then container/tertiary.",
       "basis": [
         "default:container",
         "default:nested_container",
@@ -272,7 +272,7 @@
     },
     {
       "id": "text-colours",
-      "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+      "text": "Headings use text/heading, body text uses text/body, eyebrows use text/eyebrow.",
       "basis": [
         "rule:color.text-defaults"
       ]

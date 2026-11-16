@@ -28,7 +28,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Structure
 
-- **Canvas:** A4 portrait, 794 × 1123 px at 96 dpi. 36px padding on all sides (spacing/36); content 722px wide; 12-column grid with gap/grid gutters.
+- **Canvas:** A4 portrait, 794 × 1123 px at 96 dpi. 36px safe area on all sides (spacing/36); content 722px wide; 12-column grid with gap/grid gutters.
 - **Header:** one row at the top. Left: the optional context label (Body/XS, text/brand). Right: the blue Faclon Labs logo (default height spacing/32; size may vary). padding/container below it.
 - **Footer (default):** "© Faclon Labs | All Rights Reserved" at the left and a two-digit page number (01, 02) at the right, Body/XS Medium, text/brand, no divider. A footer the user gives replaces it.
 - **Theme:** light, on background/primary.
@@ -38,7 +38,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 ## Rules that matter most
 
 - **2-pager:** exactly two pages. If the content flows past two pages, do not cut or squeeze it: highlight it to the user and offer options.
-- Text uses the style set for its element (title Heading/H2 Semi Bold, body Body/SM, caption Body/XS). Never below 10px.
+- Text uses the style set for its element (Heading/H2 Semi Bold, Body/SM, Body/XS). Never below 10px.
 - Cards are built on Card base, at most 3 in a row. Default corner radius/default (2px); a card at least half the content width uses Size Large (12px). Nest with container/secondary, then container/tertiary.
 - Images at most 722px wide, with alt text in HTML.
 - Never edit the user's content. Highlight, suggest, and change nothing until the user approves.

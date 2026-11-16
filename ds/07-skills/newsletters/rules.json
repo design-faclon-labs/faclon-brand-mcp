@@ -51,24 +51,24 @@
         ],
         "note": "The heading sits on the banner."
       },
-      "banner_title_subheader_cta": {
+      "banner_title_subtitle_cta": {
         "elements": [
           "banner image",
           "title",
-          "subheader",
+          "subtitle",
           "CTA"
         ]
       },
-      "title_subheader_image": {
+      "title_subtitle_image": {
         "elements": [
           "title",
-          "subheader",
+          "subtitle",
           "image"
         ]
       }
     },
     "rule": "Use only the elements the user gives; order and placement are the designer's call.",
-    "live_text": "Headings, subheaders and CTAs are live HTML text, not part of an image, so they read with images off.",
+    "live_text": "Headings, subtitles and CTAs are live HTML text, not part of an image, so they read with images off.",
     "banner_fallback": {
       "background": "background/brand",
       "text": "text/on-brand",
@@ -87,41 +87,41 @@
     ],
     "breakpoint_note": "Desktop sizes at the 600px breakpoint, Mobile sizes at 400px.",
     "styles": {
-      "hero_title": {
+      "heading_h2": {
         "style": "heading/h2",
         "weight": 600,
         "use": "The main heading of the email, on or near the banner"
       },
-      "section_heading": {
+      "heading_h3": {
         "style": "heading/h3",
         "weight": 600,
         "use": "Section headings"
       },
-      "subheader": {
+      "body_lg": {
         "style": "body/lg",
         "weight": 400,
-        "use": "The line under the hero title"
+        "use": "Subtitle: the line under the heading"
       },
       "card_title": {
         "role": "title",
         "use": "Card and block titles"
       },
-      "body": {
+      "card_body": {
         "role": "body",
         "use": "Paragraphs and list items"
       },
-      "cta": {
+      "card_button": {
         "role": "button",
         "use": "Button labels"
       },
-      "caption": {
+      "card_caption": {
         "role": "caption",
         "use": "Meta text, footer, legal"
       }
     },
     "step_down": {
-      "hero_title": "heading/h3",
-      "note": "If a long heading stays as the user wrote it, the hero title may step down one size to stay uncluttered; never below the minimum."
+      "heading_h2": "heading/h3",
+      "note": "If a long heading stays as the user wrote it, the heading may step down one size to stay uncluttered; never below the minimum."
     },
     "max_heading_chars": 60,
     "font_note": "Per the two-typefaces rule there is no third fallback: headings are TASA Orbiter falling back to Inter, body is Inter. Email clients that don't load web fonts will show their default font; this is accepted (brand team, 2026-10-14).",

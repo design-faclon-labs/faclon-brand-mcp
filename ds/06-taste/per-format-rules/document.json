@@ -86,7 +86,7 @@
     },
     {
       "id": "pill-radius",
-      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "text": "Never put a pill radius on a card, container, input or image.",
       "basis": [
         "rule:radius.pill-only-for-pills"
       ]
@@ -140,7 +140,7 @@
     },
     {
       "id": "cards",
-      "text": "Cards and panels use the container default: container/primary, 1px border/container, padding/container, radius/default (2px); a card at least half the content width uses Size Large (radius/3xl, 12px). Nest with container/secondary, then container/tertiary.",
+      "text": "Cards use the container default: container/primary, 1px border/container, padding/container, radius/default (2px); a card at least half the content width uses Size Large (radius/3xl, 12px). Nest with container/secondary, then container/tertiary.",
       "basis": [
         "default:container",
         "default:nested_container",
@@ -158,7 +158,7 @@
     },
     {
       "id": "text-colours",
-      "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+      "text": "Headings use text/heading, body text uses text/body, eyebrows use text/eyebrow.",
       "basis": [
         "rule:color.text-defaults"
       ]

@@ -11,56 +11,60 @@
     "max_size": 72,
     "max_style": "display/xl",
     "styles": {
-      "hero_title": {
+      "display_xl": {
         "style": "display/xl",
         "weight": 700,
         "use": "page breaker and closing statements, big numbers"
       },
-      "slide_title": {
+      "display_lg": {
         "style": "display/lg",
         "weight": 700,
-        "use": "slide headline (designed slides use 62px)"
+        "use": "slide title (designed slides use 62px)"
       },
-      "eyebrow": {
+      "body_24_medium": {
         "style": "body/24",
         "weight": 500,
-        "use": "kicker above the headline, case as written (uppercase optional)"
+        "use": "eyebrow: the line above the title, case as written (uppercase optional)"
       },
-      "section_heading": {
+      "heading_h1_bold": {
         "style": "heading/h1",
-        "weight": 700
+        "weight": 700,
+        "use": "section heading"
       },
-      "card_title": {
+      "heading_h3_bold": {
         "style": "heading/h3",
-        "weight": 700
+        "weight": 700,
+        "use": "card title"
       },
-      "panel_heading": {
+      "body_24_bold": {
         "style": "body/24",
         "weight": 700,
         "use": "panel heading, case as written (uppercase optional)"
       },
-      "body": {
+      "body_24": {
         "style": "body/24",
-        "weight": 400
+        "weight": 400,
+        "use": "body text"
       },
-      "small": {
+      "body_lg": {
         "style": "body/lg",
         "weight": 400,
         "use": "supporting text, 18px"
       },
-      "caption": {
+      "body_sm": {
         "style": "body/sm",
         "weight": 400,
         "use": "chart labels and captions, 14px"
       },
-      "chip": {
+      "body_xl_semibold": {
         "style": "body/xl",
         "weight": 600,
         "use": "label chips, case as written (uppercase optional)"
       },
-      "proof_strip": {
+      "body_24_semibold": {
         "style": "body/24",
-        "weight": 600
+        "weight": 600,
+        "use": "proof strip"
       }
     }
   },
@@ -85,7 +89,7 @@
       },
       {
         "id": "safe-area",
-        "text": "52px padding on all four sides (spacing/52) on every slide, hero slides included: logo, labels, titles and content all align to it; content area 1816 × 976 px.",
+        "text": "52px safe area on all four sides (spacing/52) on every slide, hero slides included: logo, labels, titles and content all align to it; content area 1816 × 976 px.",
         "basis": [
           "profile:safe_area",
           "profile:content_area"
@@ -100,7 +104,7 @@
       },
       {
         "id": "text-roles",
-        "text": "Text uses the named text style for its element (e.g. headline Display/LG Bold, body Body/24), between 14px and 72px.",
+        "text": "Text uses the named text style for its element (e.g. Display/LG Bold, Body/24), between 14px and 72px.",
         "basis": [
           "profile:typography.styles",
           "rule:type.styles-only"

@@ -31,7 +31,7 @@ Not set yet. Needed: the owner of the design system and who approves changes.
 
 | Folder | Holds |
 |---|---|
-| 00-start-here | This file, principles, changelog, `version.json` (brand_version) and `open-questions.json` (decision log) |
+| 00-start-here | This file, principles, `NAMING_CONVENTIONS.md` (the one list of names), changelog, `version.json` (brand_version) and `open-questions.json` (decision log) |
 | 01-foundations | Colour, typography, grid and layout per format, spacing and radius, voice, `tokens.json` and `defaults.json` |
 | 02-brand-elements | Logo rules, sub-brands, illustration, iconography, photography and imagery, data-viz, diagrams |
 | 03-components | `components.json` (the Figma components) and components still to design |

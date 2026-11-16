@@ -30,7 +30,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Structure
 
-- **Canvas:** 1920 × 1080 px, 48px padding on all sides (spacing/48), content area 1824 × 984. Light theme on background/primary.
+- **Canvas:** 1920 × 1080 px, 48px safe area on all sides (spacing/48), content area 1824 × 984. Light theme on background/primary.
 - **Header:** an optional title at the top-left, the blue logo at the top-right, gap/grid below.
 - **Shapes:**
   - Zone: container/selected fill, border/strong, 1px, radius/default, with a heading above the box.
@@ -78,6 +78,6 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] Brand blue only in the outcome; everything else neutral or light blue.
 - [ ] Zones colour-coded only if the user asked; a legend only if the user said yes when asked.
 - [ ] No crossing arrows or arrows through nodes.
-- [ ] Nothing outside the 48px padding; title top-left, logo top-right.
+- [ ] Nothing outside the 48px safe area; title top-left, logo top-right.
 - [ ] Icons from the user's library, or the user was asked.
 - [ ] HTML delivered, named `<topic>_architecture_faclon_<YYYY-MM-DD>.html`.
