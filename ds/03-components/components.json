@@ -1058,7 +1058,7 @@
         "page": "components",
         "node": "3024:2150"
       },
-      "use": "The card surface with an open slot: build any card layout inside it. Default on the page; Secondary then Tertiary when nesting; Featured makes one card stand out from its neighbours (for example a recommended option); Featured, Positive and Negative add a 1px border; Brand and Inverse need on-brand or inverse text inside.",
+      "use": "The card surface with an open slot: build any card layout inside it. Default on the page; Secondary then Tertiary when nesting; Featured makes one card stand out from its neighbours (for example a recommended option); Featured, Positive and Negative add a 1px border; Brand and Inverse need on-brand or inverse text inside. On a Dark theme (the card sits on background/inverse) the Default tone is translucent instead of solid: container/elevated at 9% (global/opacity/9) with a border/inverse border at 18% (global/opacity/18). On a Brand theme (the card sits on background/brand) it is container/inverse at 24% (global/opacity/24) with a border/inverse border at 24%. Border width (border-width/default), radius and padding do not change; a card nested inside uses the same fill, at most two levels deep on Dark so text/accent stays at 4.5:1. Light theme cards keep the solid tones above, and the Brand, Inverse, Featured, Positive and Negative tones stay solid.",
       "props": {
         "Slot": "slot",
         "Tone": [

@@ -9,7 +9,7 @@ Built components are designed in Figma (Design MCP, `components` and `Badges` pa
 - **Controls:** Badge, Button, Tag, Contact Pill
 - **Blocks** (designed 2026-10-27, in the Figma section Blocks): Stat tile, Quote card, Logo wall, Feature grid, Process flow, Comparison table, CTA band, Cover block
 
-New cards may be designed on Card base (decision `new-card-designs`).
+New cards may be designed on Card base (decision `new-card-designs`). On a Dark or Brand theme a card's Default tone is translucent, not solid (Card base `use`; decision `ui-card-opacity-on-dark-and-brand`).
 
 | Block | For | Variants |
 |---|---|---|
