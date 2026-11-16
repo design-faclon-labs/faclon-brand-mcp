@@ -153,7 +153,7 @@ test("architecture: ends in an I/O Sense outcome placed unchanged; brand blue on
   assert.equal(p.shapes.platform_panel, undefined);
   assert.equal(p.shapes.node_tag.fill, "container/info");
   assert.equal(p.arrows.data_flow.colour, "brand/400");
-  assert.equal(p.typography.styles.title.colour, "text/heading");
+  assert.equal(p.typography.styles.dense.heading_h2.colour, "text/heading");
   assert.ok(p.guardrails.must_not.some((i) => i.id === "brand-blue-outside-outcome"));
   assert.ok(p.guardrails.design_direction.some((i) => i.id === "final-outcome"));
   assert.match(p.skill, /end the diagram in one I\/O Sense outcome/);
@@ -168,12 +168,14 @@ test("architecture: three Figma outcomes and four icon + content device styles",
   for (const [id, s] of Object.entries(p.node_styles.styles)) {
     for (const ref of [s.box, s.tag, s.text].filter(Boolean)) {
       const [root, ...rest] = ref.split(".");
-      const target = root === "shapes" ? p.shapes[rest[0]] : roles[rest.at(-1)];
+      const text = ref.startsWith("typography.styles: ") ? ref.slice("typography.styles: ".length) : null;
+      const target = root === "shapes" ? p.shapes[rest[0]] : text && Object.values(roles.dense).find((e) => e.use.split("; ").includes(text));
       assert.ok(target, `${id}: ${ref} does not resolve`);
     }
   }
-  assert.equal(roles.device_label.colour, "text/secondary");
-  assert.ok(roles.device_caption.dense.style === "body/xs", "caption stays at body/xs (12px) or larger");
+  const device = Object.values(roles.dense).find((e) => e.use.split("; ").includes("device labels"));
+  assert.equal(device.colour["device labels"], "text/secondary");
+  assert.ok(device.use.split("; ").includes("device captions") && device.style === "body/xs", "caption stays at body/xs (12px) or larger"); 
   const t = getTemplates({ format_profile: "architecture" }).sections.find((s) => s.name === "Icon + content design");
   assert.equal(t.templates[0].figma_node, "3271:31036");
   assert.match(t.use, /light blue/);
@@ -189,7 +191,7 @@ test("architecture: balanced outcome and one diagram text size", () => {
   assert.match(p.final_outcome.size.max_width, /456px/);
   const s = p.typography.styles;
   for (const d of ["dense", "medium", "open"]) {
-    const sizes = new Set(["node_tag", "device_label", "device_caption", "arrow_label"].map((k) => s[k][d].style));
+    const sizes = new Set(["node tags", "device labels", "device captions", "arrow labels"].map((u) => Object.values(s[d]).find((e) => e.use.split("; ").includes(u)).style));
     assert.equal(sizes.size, 1, `${d}: device text uses one style`);
   }
   // At Medium (14px) Faclon scope scales to 386px wide: inside the quarter-width cap.

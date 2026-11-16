@@ -18,7 +18,7 @@ Real photos of people and equipment on site, darkened, with a thin overlay of de
 
 - **Theme:** dark. The photo sits under `background/inverse` at `opacity/overlay` so text and lines read clearly.
 - **Overlay:** thin 1px lines (`border-width/default`) in `text/accent`, a few boxes only around what the content is about, labels in Role/Label.
-- **Headline:** in a solid `container/inverse` block with `text/inverse`, never directly on a busy part of the photo.
+- **Heading:** in a solid `container/inverse` block with `text/inverse`, never directly on a busy part of the photo.
 - **Subjects:** real workers, plants and machines in operation, with correct safety gear.
 - **Use for:** case studies, covers and social posts about results on the shop floor.
 - **Avoid:** stock-photo poses, staged smiles, fake interface clutter, glow on the overlay lines.

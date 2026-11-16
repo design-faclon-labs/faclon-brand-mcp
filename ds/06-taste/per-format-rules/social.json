@@ -56,7 +56,7 @@
     },
     {
       "id": "pill-radius",
-      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "text": "Never put a pill radius on a card, container, input or image.",
       "basis": [
         "rule:radius.pill-only-for-pills"
       ]
@@ -162,7 +162,7 @@
     },
     {
       "id": "cover",
-      "text": "The cover (opening) slide is on the dark theme, with an image, the title and the subheader. The image comes from the user: ask them to generate it and share it.",
+      "text": "The cover (opening) slide is on the dark theme, with an image, the title and the subtitle. The image comes from the user: ask them to generate it and share it.",
       "basis": [
         "profile:carousel.cover",
         "decision:social-cover-image"
@@ -219,12 +219,12 @@
       "id": "big-numbers",
       "text": "Big numbers use Display/XL (72) in Regular so they stay easy on the eye; Bold only when the user asks.",
       "basis": [
-        "profile:typography.styles.metric"
+        "profile:typography.styles.display_xl"
       ]
     },
     {
       "id": "bruce-ai",
-      "text": "Bruce AI posts use the Bruce AI gradient (gradient/bruce-ai), for example on the headline or a highlight.",
+      "text": "Bruce AI posts use the Bruce AI gradient (gradient/bruce-ai), for example on the heading or a highlight.",
       "basis": [
         "profile:bruce_ai",
         "decision:gradients-where-allowed"
@@ -241,7 +241,7 @@
     },
     {
       "id": "one-idea",
-      "text": "One message per post, or per carousel slide, with a clear hierarchy: the headline or the big number first.",
+      "text": "One message per post, or per carousel slide, with a clear hierarchy: the heading or the big number first.",
       "basis": [
         "decision:social-media-rules"
       ]

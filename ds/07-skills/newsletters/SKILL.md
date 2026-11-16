@@ -28,10 +28,10 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Structure
 
-- **Canvas:** 600px wide on desktop and 400px on mobile (below 600px); height follows the content. 24px side padding at both sizes (content 552px and 352px).
+- **Canvas:** 600px wide on desktop and 400px on mobile (below 600px); height follows the content. 24px side safe area at both sizes (content 552px and 352px).
 - **Surfaces:** the email sits on background/secondary and the content column on background/primary. Keep the difference subtle.
 - **Logo:** centred at the top, a retina PNG, with placeholders IMAGE_URL_LOGO and LINK_URL_LOGO.
-- **Hero:** one of (a) a banner image with the heading on it, (b) a banner image with title, subheader and CTA, or (c) a title, subheader and image. Use only the elements the user gives. Headings, subheaders and CTAs are live text; a banner cell has background/brand with text/on-brand so it reads with images off. A heading on a banner keeps 24px from the banner's edges.
+- **Hero:** one of (a) a banner image with the heading on it, (b) a banner image with title, subtitle and CTA, or (c) a title, subtitle and image. Use only the elements the user gives. Headings, subtitles and CTAs are live text; a banner cell has background/brand with text/on-brand so it reads with images off. A heading on a banner keeps 24px from the banner's edges.
 - **Impact section:** a business impact (or impact) section sits on the dark theme or the brand theme.
 - **Spacing:** padding/section between sections (56 desktop, 32 mobile), gap/grid between blocks (24, 16), gap/stack inside a text group (12), padding/container inside cards.
 - **CTA:** a bulletproof button: live text in a linked table cell, radius/default, never pill.

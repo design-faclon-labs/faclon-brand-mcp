@@ -139,7 +139,7 @@
     {
       "id": "type.heading-family",
       "category": "typography",
-      "rule": "TASA Orbiter is for headings and display type only. Never use it for body copy, and never mix the two roles.",
+      "rule": "TASA Orbiter is for headings and display type only. Never use it for body text, and never mix the two roles.",
       "check": {
         "type": "font-family",
         "role": "heading",
@@ -152,7 +152,7 @@
     {
       "id": "type.body-family",
       "category": "typography",
-      "rule": "Inter is for body copy, labels, captions and eyebrows only. Never use it for headings (except as TASA Orbiter's fallback).",
+      "rule": "Inter is for body text, labels, captions and eyebrows only. Never use it for headings (except as TASA Orbiter's fallback).",
       "check": {
         "type": "font-family",
         "role": "body",
@@ -276,7 +276,7 @@
         ],
         "roles": {
           "eyebrow": {
-            "use": "kicker above a title",
+            "use": "the line above a title",
             "font": "Inter Medium, case as written",
             "document": "eyebrow",
             "newsletter": "body/sm",
@@ -361,7 +361,7 @@
     {
       "id": "type.body-regular-no-tracking",
       "category": "typography",
-      "rule": "Body copy sizes (Body/XL 20px down to Body/2XS 10px) default to Inter Regular and have no letter spacing (0) at any weight.",
+      "rule": "Body text sizes (Body/XL 20px down to Body/2XS 10px) default to Inter Regular and have no letter spacing (0) at any weight.",
       "check": {
         "type": "text-style",
         "roles": [
@@ -450,7 +450,7 @@
     {
       "id": "color.text-defaults",
       "category": "color",
-      "rule": "Headings (h1–h6) use text/heading (#0C1927 Light, #F1F5FA Dark); body copy uses text/body (#243547 Light, #CBD5E2 Dark); eyebrows use text/eyebrow (brand/500 Light, brand/300 Dark). Never use text/heading for body copy.",
+      "rule": "Headings (h1–h6) use text/heading (#0C1927 Light, #F1F5FA Dark); body text uses text/body (#243547 Light, #CBD5E2 Dark); eyebrows use text/eyebrow (brand/500 Light, brand/300 Dark). Never use text/heading for body text.",
       "check": {
         "type": "semantic-role",
         "map": {
@@ -879,7 +879,7 @@
     {
       "id": "design.no-ai-slop",
       "category": "design",
-      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background; the two illustration styles in 02-brand-elements/illustration (dot-matrix forms, pixel dissolve); and, on Bruce AI content only, the gradient/bruce-ai style and glow. Glow is allowed only on Bruce AI content (for example a glowing Bruce AI product visual or headline, with the Bruce AI gradient); never on any other content.",
+      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background; the two illustration styles in 02-brand-elements/illustration (dot-matrix forms, pixel dissolve); and, on Bruce AI content only, the gradient/bruce-ai style and glow. Glow is allowed only on Bruce AI content (for example a glowing Bruce AI product visual or heading, with the Bruce AI gradient); never on any other content.",
       "check": {
         "type": "pattern-ban",
         "never": [

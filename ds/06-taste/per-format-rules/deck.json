@@ -63,7 +63,7 @@
     },
     {
       "id": "pill-radius",
-      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "text": "Never put a pill radius on a card, container, input or image.",
       "basis": [
         "rule:radius.pill-only-for-pills"
       ]
@@ -85,9 +85,10 @@
     },
     {
       "id": "stretched-cards",
-      "text": "Never stretch a card or panel to fill a row or the slide when its content is short, leaving empty boxes. Size it to its content; if the slide looks empty, raise the type a role or grow the visual.",
+      "text": "Never stretch a card to fill a row or the slide when its content is short, leaving empty boxes. Size it to its content; a slide with little content stays minimal, and never enlarge the type or add decoration to fill the space.",
       "basis": [
-        "decision:deck-density"
+        "decision:deck-density",
+        "decision:deck-skill-2026-11-12"
       ]
     },
     {
@@ -189,7 +190,7 @@
     },
     {
       "id": "cards",
-      "text": "Cards and panels use the container default with a 12px corner: container/primary, 1px border/container, radius/3xl (12px), padding/container. Nest with container/secondary, then container/tertiary.",
+      "text": "Cards use the container default with a 12px corner: container/primary, 1px border/container, radius/3xl (12px), padding/container. Nest with container/secondary, then container/tertiary.",
       "basis": [
         "default:container",
         "default:nested_container",
@@ -216,7 +217,7 @@
     },
     {
       "id": "text-colours",
-      "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+      "text": "Headings use text/heading, body text uses text/body, eyebrows use text/eyebrow.",
       "basis": [
         "rule:color.text-defaults"
       ]
@@ -272,9 +273,10 @@
     },
     {
       "id": "density",
-      "text": "Fill the content area with content, not empty boxes: size cards to their content, give every block of text a container with padding/container or the same breathing room on the grid, and when a slide has little content raise the type a role and grow the visual. On covers and hero slides the title, subline and details form one group.",
+      "text": "Size cards to their content, give every block of text a container with padding/container or the same breathing room on the grid, and use negative space on purpose: when a slide has little content, never raise the type a role or add decoration to fill it. On covers and hero slides the title, subtitle and details form one group.",
       "basis": [
         "decision:deck-density",
+        "decision:deck-skill-2026-11-12",
         "profile:safe_area"
       ]
     },
@@ -300,6 +302,83 @@
       "basis": [
         "decision:product-slides-light-with-mockup",
         "profile:product_slides"
+      ]
+    },
+    {
+      "id": "template-first",
+      "text": "Search the templates and reference slides first: use an approved one if it fits, adapt it to the content, and only then build a new layout from the Faclon patterns. Never use an outdated or unapproved reference slide.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "slide-plan",
+      "text": "Plan every slide before any HTML: objective, one message, content, content form, matching template, components and assets, layout. Spread content across slides; never cut or reword it to make it fit.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "wireframe",
+      "text": "When no template fits, wireframe the layout on the grid as an internal step. Do not stop for approval unless the user asks to review it.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "default-theme",
+      "text": "Light is the default theme. Dark and brand slides are the opening, page breakers, closing and product stack; elsewhere only when the user asks or the content needs it, never because a topic mentions AI or technology.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "no-footers",
+      "text": "No footers unless the user asks for one.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "product-stack",
+      "text": "The product stack is a fixed approved design: use the reference slide as it is. Never redesign it, redraw it or replace it with an illustration; a different relationship is a separate diagram.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "people-images",
+      "text": "People are the approved cut-out headshots: transparent background, no fill added, torso at least, never an AI-generated replacement.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "tables-charts",
+      "text": "Use the table and chart components and the data-viz references. Keep supplied numbers and units, label axes and data, and never invent values or comparisons.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "html-file",
+      "text": "One HTML file: each slide a 1920 × 1080 container inside the 52px safe area, scaling to the window, with keyboard and visible navigation, no overflow and no broken images.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "validation",
+      "text": "Run check_design, fix the named failures and run it again. Stop after two correction cycles and report what remains. Render and inspect every slide when possible, and never claim an inspection that did not happen.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
+      ]
+    },
+    {
+      "id": "delivery-note",
+      "text": "Deliver with a short note: design decisions, content that did not fit, missing assets and placeholders, unresolved issues and any check not completed.",
+      "basis": [
+        "decision:deck-skill-2026-11-12"
       ]
     }
   ]

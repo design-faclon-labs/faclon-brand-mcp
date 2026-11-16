@@ -35,20 +35,20 @@ If an element carries no content or structure, it goes. When in doubt, leave it 
 
 ## 4. Restraint creates impact
 
-Bold color and strong contrast work because they are rare.
+Bold colour and strong contrast work because they are rare.
 
-- Brand blue is the one primary color.
+- Brand blue is the one primary colour.
 - The accents are highlights, used on roughly 10-15% of a piece at most, not as a palette.
 - Dark and brand themes are kept for the moments that matter: impact sections, page breakers and closings, and AI slides when the user wants them dark.
 
-*Built from:* primary color is brand blue only (2026-10-22), accent budget, impact section on dark or brand (2026-10-23), AI slide theme asked, not defaulted (2026-10-28).
+*Built from:* primary colour is brand blue only (2026-10-22), accent budget, impact section on dark or brand (2026-10-23), AI slide theme asked, not defaulted (2026-10-28).
 
 ## 5. Legible everywhere
 
 If it cannot be read, it does not work, however good it looks.
 
 - Text never goes below the minimum for its format: 14px for decks, 12px for newsletters, 10px for documents and architecture diagrams.
-- Text always passes contrast on its surface. Essential text is never set in a low-contrast color or on a surface where it fails.
+- Text always passes contrast on its surface. Essential text is never set in a low-contrast colour or on a surface where it fails.
 - Everything has room to breathe: real spacing between blocks, and nothing touching an edge.
 
 *Built from:* type.min-size and the per-format minimums (newsletter 12px and architecture 10px from 2026-10-23), tertiary-text, eyebrow-surfaces, breathing-room, no-overflow.
@@ -57,13 +57,13 @@ If it cannot be read, it does not work, however good it looks.
 
 Everything comes from the design system, and within it each piece is designed for its own content.
 
-- Every color, font, size, radius and spacing value is a design-system token or style.
+- Every colour, font, size, radius and spacing value is a design-system token or style.
 - Only TASA Orbiter and Inter are used.
 - The full Faclon Labs logo is used by default, following its rules.
 - The named cards and templates are starting points. New designs are welcome when they are built from the system, for example a new card on Card base.
 - Vary the design between sections. Repeat a design only where the content repeats.
 
-*Built from:* tokens-only, two fonts, sizes in scale, new card designs, same-card-everywhere, other colors only from the design system on request (2026-10-23), logomark only on request (2026-10-22).
+*Built from:* tokens-only, two fonts, sizes in scale, new card designs, same-card-everywhere, other colours only from the design system on request (2026-10-23), logomark only on request (2026-10-22).
 
 ## 7. Think like sales, design like a senior designer
 

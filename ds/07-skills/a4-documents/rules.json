@@ -2,7 +2,7 @@
   "id": "document",
   "name": "Document / 2-pager (A4)",
   "status": "approved",
-  "note": "Specification approved by the brand team on 2026-10-14. Padding, header and footer follow their Figma page (Design MCP, frame '5'): 26pt on 595 × 842 pt = 36px (spacing/36) at 794 × 1123 px. Every font is a named text style and every value a token. Logo size may vary; its position does not.",
+  "note": "Specification approved by the brand team on 2026-10-14. Safe area, header and footer follow their Figma page (Design MCP, frame '5'): 26pt on 595 × 842 pt = 36px (spacing/36) at 794 × 1123 px. Every font is a named text style and every value a token. Logo size may vary; its position does not.",
   "audience": "external",
   "spacing": {
     "header_to_content": "padding/container",
@@ -29,95 +29,75 @@
         "style": "eyebrow",
         "weight": 500,
         "colour": "text/eyebrow",
-        "use": "kicker above the title"
+        "use": "the line above the title"
       },
-      "title": {
+      "heading_h2": {
         "style": "heading/h2",
         "weight": 600,
         "colour": "text/heading",
         "use": "document title"
       },
-      "intro": {
+      "body_md": {
         "style": "body/md",
         "weight": 400,
         "colour": "text/secondary",
-        "use": "standfirst under the title"
+        "use": "Subtitle: the line under the title"
       },
-      "section_heading": {
+      "heading_h4": {
         "style": "heading/h4",
         "weight": 600,
         "colour": "text/heading"
       },
-      "sub_heading": {
+      "heading_h6": {
         "style": "heading/h6",
         "weight": 500,
-        "colour": "text/heading"
+        "use": "sub headings; links and CTAs",
+        "colour": {
+          "sub headings": "text/heading",
+          "links and CTAs": "text/link"
+        }
       },
-      "body": {
+      "body_sm": {
         "style": "body/sm",
         "weight": 400,
         "colour": "text/body",
-        "use": "paragraphs and lists (Role/Body)"
+        "use": "paragraphs, lists and card body text"
       },
-      "caption": {
+      "body_xs": {
         "style": "body/xs",
         "weight": 400,
-        "colour": "text/secondary",
-        "use": "captions, sources, meta (Role/Caption)"
+        "use": "captions, sources, meta and metric labels; table cells; header labels",
+        "colour": {
+          "captions, sources, meta and metric labels": "text/secondary",
+          "table cells": "text/body",
+          "header labels": "text/brand"
+        }
       },
-      "card_title": {
+      "heading_h5": {
         "style": "heading/h5",
         "weight": 500,
         "colour": "text/heading",
-        "use": "Role/Title"
+        "use": "card titles"
       },
-      "card_body": {
-        "style": "body/sm",
-        "weight": 400,
-        "colour": "text/body"
-      },
-      "metric": {
+      "heading_h3": {
         "style": "heading/h3",
         "weight": 600,
         "colour": "text/heading",
-        "use": "KPI numbers (Role/Metric)"
+        "use": "KPI numbers"
       },
-      "metric_label": {
-        "style": "body/xs",
-        "weight": 400,
-        "colour": "text/secondary"
-      },
-      "table_header": {
+      "body_xs_semibold": {
         "style": "body/xs",
         "weight": 600,
         "colour": "text/heading"
       },
-      "table_cell": {
-        "style": "body/xs",
-        "weight": 400,
-        "colour": "text/body"
-      },
-      "chip_label": {
+      "body_xs_medium": {
         "style": "body/xs",
         "weight": 500,
-        "colour": "per intent",
-        "use": "Role/Label"
-      },
-      "link": {
-        "style": "heading/h6",
-        "weight": 500,
-        "colour": "text/link",
-        "use": "links and CTAs (Role/Button)"
-      },
-      "header_label": {
-        "style": "body/xs",
-        "weight": 400,
-        "colour": "text/brand"
-      },
-      "footer": {
-        "style": "body/xs",
-        "weight": 500,
-        "colour": "text/brand"
+        "use": "chip labels; footer",
+        "colour": {
+          "chip labels": "per intent",
+          "footer": "text/brand"
+        }
       }
     }
   },
@@ -180,11 +160,11 @@
     "footer_zone": {
       "height": 18,
       "text_style": "body/xs",
-      "position": "bottom of the content area, on the 36px bottom padding"
+      "position": "bottom of the content area, on the 36px bottom safe area"
     },
     "content_to_footer": "gap/grid",
     "content_bottom_limit": 1045,
-    "content_bottom_limit_note": "Nothing goes below 1045px from the top of the page: page height 1123 − bottom padding 36 − footer 18 − gap/grid 24."
+    "content_bottom_limit_note": "Nothing goes below 1045px from the top of the page: page height 1123 − bottom safe area 36 − footer 18 − gap/grid 24."
   },
   "images": {
     "max_width": 722,
@@ -209,8 +189,8 @@
         ]
       },
       {
-        "id": "margins",
-        "text": "36px padding on all four sides (spacing/36); content is 722px wide.",
+        "id": "safe-area",
+        "text": "36px safe area on all four sides (spacing/36); content is 722px wide.",
         "basis": [
           "profile:safe_area",
           "profile:content_width"
@@ -225,7 +205,7 @@
       },
       {
         "id": "text-roles",
-        "text": "Text uses the text style set for its element (e.g. title Heading/H2 Semi Bold, body Body/SM, caption Body/XS), never a raw size.",
+        "text": "Text uses the text style set for its element (e.g. Heading/H2 Semi Bold, Body/SM, Body/XS), never a raw size.",
         "basis": [
           "profile:typography.styles",
           "rule:type.styles-only"

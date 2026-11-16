@@ -34,7 +34,7 @@ These come from the design system and apply whatever the layout:
 - **Type:** big numbers in TASA Orbiter, labels, axes and captions in Inter, nothing below the format's minimum size.
 - **Theme:** draw each form in the theme of the surface it sits on with that theme's tokens; every form here works on light and on dark.
 - **No AI slop:** no 3D charts, shadows, glows or gradient fills or lines; axes are one solid baseline with light dashed gridlines (border/primary) and labels in text/tertiary.
-- **HTML:** inline SVG with colours as CSS variables from get_tokens, lines 2px (border/width md), text as live text; never an image of a chart.
+- **HTML:** inline SVG with colours as CSS variables from get_tokens, lines 2px (border-width/md), text as live text; never an image of a chart.
 
 ## Stat layouts
 
@@ -48,7 +48,7 @@ The number at the largest text role, one caption line under it with the key phra
 
 ![Stat with a unit grid](%DATAVIZ_URL%/stat-unit-grid.png)
 
-Headline and subline at the top; the number in text/brand beside a short bold caption; a 10 by 10 grid of squares where one square is 1%, filled in brand and empty in a light neutral, with its key under it ("1 square = 1% of …"); a hairline, then the source. The reference's purple and Roboto become brand blue and TASA Orbiter or Inter.
+Heading and subtitle at the top; the number in text/brand beside a short bold caption; a 10 by 10 grid of squares where one square is 1%, filled in brand and empty in a light neutral, with its key under it ("1 square = 1% of …"); a hairline, then the source. The reference's purple and Roboto become brand blue and TASA Orbiter or Inter.
 
 ## Charts
 

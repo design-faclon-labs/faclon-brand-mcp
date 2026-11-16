@@ -5,7 +5,7 @@ Icons come from Lucide (lucide.dev, open source under the ISC license). Set by t
 ## Drawing
 
 - Lucide only, used as drawn: outline icons on a 24px grid with round caps and joins. Never fill an icon, add a second colour, change its corners or stroke ends, combine two icons or draw a new one.
-- Stroke 2px (border/width md) at every icon size, as on the buttons, so the icons in one piece match each other and the text.
+- Stroke 2px (border-width/md) at every icon size, as on the buttons, so the icons in one piece match each other and the text.
 - If Lucide has no icon that names the item, use the nearest clear meaning; if there is none, ask the user. Never a generic placeholder icon.
 - No AI cliche icons: glowing brains, circuits, robot hands, sparkles or rockets for AI.
 

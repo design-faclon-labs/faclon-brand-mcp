@@ -30,9 +30,9 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
    - steps or a change in how work is done: an icon flow;
    - problem and solution, or before and after: a split, the problem in the Negative intent;
    - comparison: labelled bars or a compact table;
-   - like items (data sources, capabilities, pain points): cards or tiles with an icon per item;
+   - like items (data sources, capabilities, pain points): cards with an icon per item;
    - a quote: a quote card with the headshot from the asset library;
-   - one statement or call to action: the headline as the hero, with a design element.
+   - one statement or call to action: the heading as the hero, with a design element.
    A row of text cards or a bare list is never the form for steps, results or a problem.
    For numbers, steps, stages, cycles and systems, look at `get_brand_guidelines(section: "data-viz")`: reference layouts (stat layouts, charts, a funnel, a flywheel, a staircase of steps, plant drawings) that show the kinds of design you can build and how to place the number, caption, labels and source. They are references, not fixed layouts: build designs like them, adapted to the content and the space.
 4. **Design** at 540px wide on the 12-column grid, starting from the template's layout and building every value from the design system. Put supporting text, stats and items in UI cards and boxes (see Structure), place the logo file on every slide, and use design elements wherever the background allows them.
@@ -45,18 +45,18 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - **Safe area and grid:** 24px on all sides (spacing/24); content 492px wide; 12 columns of 30px with 12px gutters (spacing/12). Common splits: 6 + 6, 4 + 4 + 4, 3 + 3 + 3 + 3, 8 + 4. Elements start and end on column edges. Only images may bleed to the edge.
 - **Logo:** the full Faclon Labs logo file on every post and slide, top-right by default (top-left when the slide design needs it), about 132px wide: `logos/faclon-labs-logo-blue` on light, `logos/faclon-labs-logo-white` on dark and brand, as an `<img>` from the asset's `url` with alt "Faclon Labs". Never a placeholder box, a text label or a redrawn logo.
 - **Carousel themes:**
-  - Cover: dark theme, with the user's image, the title and the subheader.
+  - Cover: dark theme, with the user's image, the title and the subtitle.
   - Content slides: no fixed theme or order. Pick light, dark or brand per slide from the templates and the content (the templates use brand blue for step posts with a big stat, dark for stat tiles, light for quotes), unless the user asks for one. Mix themes so the carousel never reads as one colour.
   - Closing slide: the cover's theme and colours.
 - **Spacing (desktop values at 540px; double at 1080):** gap/inline 8 between adjacent items, gap/stack 12 inside a card, gap/grid 24 between cards, padding/container 16 inside every card and box, padding/section 56 between sections.
 - **UI cards:** supporting text, stats and items sit in cards and boxes with the container default: container/primary, 1px border/container, radius/3xl (12px), padding/container; on brand slides container/inverse with text/inverse, as in the templates. The named cards and blocks (Stat tile, Quote card, Feature grid, Process flow) are starting points; build new ones on Card base.
-- **Type (at 540px; double at 1080):** headline Heading/H1 Bold (40); cover headline Display/MD (48); subheadline Heading/H2 Bold (32) beside a big number, or Body/XL (20) under a title; big numbers Display/XL Regular (72), Display/LG (60) in a stat grid; body Body/LG (18); labels Role/Label (12); CTA Role/Button (16); caption Role/Caption (12); footnotes Body/2XS (10). Never below 10px, never above 72px.
+- **Type (at 540px; double at 1080):** heading Heading/H1 Bold (40); cover Display/MD (48); Subtitle Heading/H2 Bold (32) beside a big number, or Subtitle Body/XL (20) under a title; big numbers Display/XL Regular (72), Display/LG (60) in a stat grid; body Body/LG (18); labels Role/Label (12); CTA Role/Button (16); caption Role/Caption (12); footnotes Body/2XS (10). Never below 10px, never above 72px.
 
 ## Rules that matter most
 
 - Every post combines colours; never a single colour. Brand blue with the neutrals and an accent highlight, all from tokens.
 - Big numbers in Regular so they stay easy on the eye; Bold only when the user asks.
-- **Bruce AI posts** use the Bruce AI gradient (`--gradient-bruce-ai`), for example on the headline or a highlight. No other post uses it. Bruce AI posts may also use glow (for example on the product visual); no other post does.
+- **Bruce AI posts** use the Bruce AI gradient (`--gradient-bruce-ai`), for example on the heading or a highlight. No other post uses it. Bruce AI posts may also use glow (for example on the product visual); no other post does.
 - **Design elements** make a post read as Faclon Labs: use them on any slide whose background allows them, not only the cover and closing. The dot-particle form on dark or brand, the light streak only on brand, the dot wave on dark, light or brand. Text never sits on the dots. They are exempt from the no-AI-slop rule; nothing else is.
 - Every slide is drawn in its content form (step 3): big numbers with a visual, icon flows, stat tiles, bars, splits, not paragraphs, lists or rows of text cards. Avoid text-heavy posts: if the content is long, tell the user and offer options (a carousel, a shorter visual with detail in the post text).
 - Fill the slide with content, not empty space: size cards to their content and never stretch them or pin short cards to the bottom; if a slide looks empty, raise the type a role or grow the visual. Labels and their text share a line or first baseline; left edges line up.
