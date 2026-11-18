@@ -2,11 +2,11 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-31T06:45:29.716Z",
+    "extractedAt": "2026-11-18T09:08:08.245Z",
     "method": "Faclon Brand Sync plugin",
     "figmaVersion": {
-      "id": "2416348829462261633",
-      "title": "Icon square default 24"
+      "id": "2423075924541489228",
+      "title": "Colour token descriptions"
     }
   },
   "collections": [
@@ -603,7 +603,7 @@
               "collection": "Global Colors"
             }
           },
-          "description": "Selected / active state for rows, tabs, nav items."
+          "description": "The selected or active state of rows, tabs and nav items. Eyebrow text may sit on it."
         },
         {
           "name": "container/brand",
@@ -1008,7 +1008,7 @@
               "collection": "Global Colors"
             }
           },
-          "description": "DEFAULT border for container/primary. Light: neutral-light/200. Very low contrast by design — see the ratios in semantic.css."
+          "description": "The default 1px edge of container/primary (Light: neutral-light/200), very low contrast by design; see the ratios in semantic.css. For a stronger border (inputs, table dividers) use border/primary."
         },
         {
           "name": "background/accent",
@@ -1173,7 +1173,7 @@
               "collection": "Global Colors"
             }
           },
-          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+          "description": "Text on the strong status fills container/info-strong, container/success-strong and container/error-strong (white in both themes). Added for the Badge intents Information, Intense Positive and Intense Negative."
         },
         {
           "name": "text/accent-on-brand",
@@ -1188,7 +1188,7 @@
               "collection": "Global Colors"
             }
           },
-          "description": "Highlighted text (a key phrase) on background/brand or container/brand only, e.g. the last item of a proof strip on a page breaker. 4.83:1 on brand/500. Never on light or dark surfaces: there use text/link (light) or text/accent (dark). Counts toward the 10–15% accent budget."
+          "description": "Highlighted text (a key phrase) on background/brand or container/brand only, e.g. the last item of a proof strip on a page breaker, in lime (#B4FF6B, 4.83:1 on brand/500). Never on light or dark surfaces: there use text/link (light) or text/accent (dark). It counts toward the 10-15% accent budget."
         }
       ]
     },

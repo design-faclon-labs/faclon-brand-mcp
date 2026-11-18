@@ -2,6 +2,10 @@
 
 Each change to the system bumps `brand_version` in `version.json` (format `YYYY.MM.DD-n`). Newest first.
 
+## 2026-11-18
+
+- Colour naming audit applied (brand 2026.11.18-1): the Figma Colors page heading "Gradients colors" is now "Gradient colors" (text only, same size and font). Token names are unchanged: `gradient/brand` and `gradient/bruce-ai` keep their names, as do `text/link`, `container/info`, `container/info-strong` and `text/on-strong`; there is no `text/hyperlink`. The colour section gains short usage notes for `text/on-strong`, `text/accent-on-brand`, `container/selected` and `border/container`, taken from the validator rules and the Figma variable descriptions. The same four Figma variable descriptions now carry these explanations (the proof-strip example for `text/accent-on-brand` and the Light value and `semantic.css` reference for `border/container` are kept), and `snapshot.json` was refreshed from Figma (version "Colour token descriptions"), so `tokens.json` differs only in its source metadata. No token, value, gradient stop or CSS variable changed.
+
 ## 2026-11-16
 
 - UI cards on a Dark or Brand theme are translucent (rule in the Card base `use`, decision `ui-card-opacity-on-dark-and-brand`): Dark is container/elevated at 9% with a border/inverse border at 18%; Brand is container/inverse at 24% with a border/inverse border at 24%; nested cards use the same fill. Light theme cards, border width, radius, padding and the Brand, Inverse, Featured, Positive and Negative tones are unchanged.
